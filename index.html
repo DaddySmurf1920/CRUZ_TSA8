@@ -7,39 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="controls">
-        <label for="direction">Flex Direction:</label>
-        <select id="direction" onchange="updateFlexbox()">
-            <option value="row">Row</option>
-            <option value="row-reverse">Row Reverse</option>
-            <option value="column">Column</option>
-            <option value="column-reverse">Column Reverse</option>
-        </select>
-
-        <label for="justify">Justify Content:</label>
-        <select id="justify" onchange="updateFlexbox()">
-            <option value="flex-start">Flex Start</option>
-            <option value="flex-end">Flex End</option>
-            <option value="center">Center</option>
-            <option value="space-between">Space Between</option>
-            <option value="space-around">Space Around</option>
-            <option value="space-evenly">Space Evenly</option>
-        </select>
-
-        <label for="align">Align Items:</label>
-        <select id="align" onchange="updateFlexbox()">
-            <option value="stretch">Stretch</option>
-            <option value="flex-start">Flex Start</option>
-            <option value="flex-end">Flex End</option>
-            <option value="center">Center</option>
-            <option value="baseline">Baseline</option>
-        </select>
-    </div>
-
     <div class="flex-container" id="flex-container">
         <div class="flex-item">Item 1</div>
         <div class="flex-item">Item 2</div>
         <div class="flex-item">Item 3</div>
+    </div>
+
+    <div class="controls">
+        <div class="control-group">
+            <button onclick="setDirection('row')">Row</button>
+            <button onclick="setDirection('row-reverse')">Row Reverse</button>
+            <button onclick="setDirection('column')">Column</button>
+            <button onclick="setDirection('column-reverse')">Column Reverse</button>
+        </div>
+        
+        <div class="control-group">
+            <button onclick="setJustifyContent('flex-start')">Flex Start</button>
+            <button onclick="setJustifyContent('flex-end')">Flex End</button>
+            <button onclick="setJustifyContent('center')">Center</button>
+            <button onclick="setJustifyContent('space-between')">Space Between</button>
+            <button onclick="setJustifyContent('space-around')">Space Around</button>
+            <button onclick="setJustifyContent('space-evenly')">Space Evenly</button>
+        </div>
+
+        <div class="control-group">
+            <button onclick="setAlignItems('stretch')">Stretch</button>
+            <button onclick="setAlignItems('flex-start')">Flex Start</button>
+            <button onclick="setAlignItems('flex-end')">Flex End</button>
+            <button onclick="setAlignItems('center')">Center</button>
+            <button onclick="setAlignItems('baseline')">Baseline</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
