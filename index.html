@@ -15,6 +15,7 @@
 
     <div class="controls">
         <div class="control-group">
+            <label>Direction:</label>
             <button onclick="setDirection('row')">Row</button>
             <button onclick="setDirection('row-reverse')">Row Reverse</button>
             <button onclick="setDirection('column')">Column</button>
@@ -22,19 +23,21 @@
         </div>
         
         <div class="control-group">
-            <button onclick="setJustifyContent('flex-start')">Flex Start</button>
-            <button onclick="setJustifyContent('flex-end')">Flex End</button>
+            <label>Justify Content:</label>
+            <button onclick="setJustifyContent('flex-start')">Start</button>
             <button onclick="setJustifyContent('center')">Center</button>
+            <button onclick="setJustifyContent('flex-end')">End</button>
             <button onclick="setJustifyContent('space-between')">Space Between</button>
             <button onclick="setJustifyContent('space-around')">Space Around</button>
             <button onclick="setJustifyContent('space-evenly')">Space Evenly</button>
         </div>
 
         <div class="control-group">
+            <label>Align Items:</label>
             <button onclick="setAlignItems('stretch')">Stretch</button>
-            <button onclick="setAlignItems('flex-start')">Flex Start</button>
-            <button onclick="setAlignItems('flex-end')">Flex End</button>
+            <button onclick="setAlignItems('flex-start')">Start</button>
             <button onclick="setAlignItems('center')">Center</button>
+            <button onclick="setAlignItems('flex-end')">End</button>
             <button onclick="setAlignItems('baseline')">Baseline</button>
         </div>
 
@@ -52,7 +55,7 @@
             <input type="number" id="item3-grow" name="item3-grow" min="0" value="1" onchange="setFlexGrow(3)">
         </div>
 
-        <button onclick="resetFlexbox()">Reset</button>
+        <button class="reset-button" onclick="resetFlexbox()">Reset</button>
     </div>
 
     <script src="script.js"></script>
