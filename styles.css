@@ -5,6 +5,7 @@ body {
     align-items: center;
     margin: 0;
     padding: 20px;
+    background-color: #f0f2f5;
 }
 
 .controls {
@@ -12,9 +13,24 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .control-group {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.control-group label {
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
@@ -25,12 +41,20 @@ button {
     background-color: #007BFF;
     color: white;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 5px;
 }
 
 button:hover {
     background-color: #0056b3;
+}
+
+input {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .flex-container {
@@ -40,6 +64,10 @@ button:hover {
     border: 2px solid #ccc;
     margin-bottom: 20px;
     gap: 10px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .flex-item {
@@ -50,6 +78,7 @@ button:hover {
     text-align: center;
     color: white;
     font-size: 18px;
+    border-radius: 5px;
 }
 
 .flex-item:nth-child(1) {
@@ -62,4 +91,12 @@ button:hover {
 
 .flex-item:nth-child(3) {
     background-color: #3cb371;
+}
+
+.reset-button {
+    background-color: #ff6347;
+}
+
+.reset-button:hover {
+    background-color: #cc5134;
 }
