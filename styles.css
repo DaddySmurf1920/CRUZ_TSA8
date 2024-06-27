@@ -1,43 +1,102 @@
-function setDirection(direction) {
-    const flexContainer = document.getElementById('flex-container');
-    flexContainer.style.flexDirection = direction;
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f2f5;
 }
 
-function setJustifyContent(justifyContent) {
-    const flexContainer = document.getElementById('flex-container');
-    flexContainer.style.justifyContent = justifyContent;
+.controls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-function setAlignItems(alignItems) {
-    const flexContainer = document.getElementById('flex-container');
-    flexContainer.style.alignItems = alignItems;
+.control-group {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-function setGap() {
-    const gapValue = document.getElementById('gap').value;
-    const flexContainer = document.getElementById('flex-container');
-    flexContainer.style.gap = `${gapValue}px`;
+.control-group label {
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-function setFlexGrow(itemNumber) {
-    const flexItem = document.getElementById(`item${itemNumber}`);
-    const growValue = document.getElementById(`item${itemNumber}-grow`).value;
-    flexItem.style.flexGrow = growValue;
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
 }
 
-function resetFlexbox() {
-    const flexContainer = document.getElementById('flex-container');
-    flexContainer.style.flexDirection = 'row';
-    flexContainer.style.justifyContent = 'flex-start';
-    flexContainer.style.alignItems = 'stretch';
-    flexContainer.style.gap = '10px';
+button:hover {
+    background-color: #0056b3;
+}
 
-    document.getElementById('gap').value = 10;
-    document.getElementById('item1').style.flexGrow = 1;
-    document.getElementById('item2').style.flexGrow = 1;
-    document.getElementById('item3').style.flexGrow = 1;
+input {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
-    document.getElementById('item1-grow').value = 1;
-    document.getElementById('item2-grow').value = 1;
-    document.getElementById('item3-grow').value = 1;
+.flex-container {
+    display: flex;
+    width: 80%;
+    max-width: 600px;
+    min-height: 100px;
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.flex-item {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.flex-item:nth-child(1) {
+    background-color: #ff6347;
+}
+
+.flex-item:nth-child(2) {
+    background-color: #4682b4;
+}
+
+.flex-item:nth-child(3) {
+    background-color: #3cb371;
+}
+
+.reset-button {
+    background-color: #ff6347;
+}
+
+.reset-button:hover {
+    background-color: #cc5134;
 }
