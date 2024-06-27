@@ -17,9 +17,7 @@
         <div class="control-group">
             <label>Direction:</label>
             <button onclick="setDirection('row')">Row</button>
-            <button onclick="setDirection('row-reverse')">Row Reverse</button>
             <button onclick="setDirection('column')">Column</button>
-            <button onclick="setDirection('column-reverse')">Column Reverse</button>
         </div>
         
         <div class="control-group">
@@ -34,11 +32,9 @@
 
         <div class="control-group">
             <label>Align Items:</label>
-            <button onclick="setAlignItems('stretch')">Stretch</button>
             <button onclick="setAlignItems('flex-start')">Start</button>
             <button onclick="setAlignItems('center')">Center</button>
             <button onclick="setAlignItems('flex-end')">End</button>
-            <button onclick="setAlignItems('baseline')">Baseline</button>
         </div>
 
         <div class="control-group">
@@ -54,7 +50,6 @@
             <label for="item3-grow">Item 3 Grow:</label>
             <input type="number" id="item3-grow" name="item3-grow" min="0" value="1" onchange="setFlexGrow(3)">
         </div>
-
         <button class="reset-button" onclick="resetFlexbox()">Reset</button>
     </div>
 
